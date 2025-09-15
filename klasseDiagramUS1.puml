@@ -1,0 +1,93 @@
+@startuml ClassDiagramUS1+2
+'Alt+D = preview
+
+
+class Main{
+'BoardGameApp
+}
+
+package Entities{
+
+    class Library{
+        -Game game
+        -search(Game game)
+        -filter(Enum genre)
+        -filterNOOfPlayers(int minNOOfPlayers, int maxNOOfPlayers)
+        -filterAge(int minAgeOfPlayers)
+        -showAllGames()
+    }
+
+    class User{
+        -String userName
+        -Integer userId
+        -String email
+        -String password
+        -FavoriteList favoriteList
+    }
+
+    class FavoriteList{
+        -String listName
+        -Integer listId
+        -List <Game> games
+        -quickAddGame(Integer gameId, Integer listId)
+        -quickRemoveGame(Integer gameId, Integer listId)
+    } 
+
+    class Game {
+        -String title
+        -Integer gameId: UUID
+        -String description
+        -int minNOOfPlayers
+        -int maxNOOfPlayers
+        -int minAge
+        -int maxAge
+        -int releaseYear
+        -List <String> languages
+        -Genre genre
+    }
+
+    enum Genre{
+    }
+}
+
+package Controllers{
+    class LibraryController{
+        addRoutes()
+    }
+
+    class UserController{
+        addRoutes()
+    }
+
+    class GameController{
+        addRoutes()
+    }
+
+    class FavoritesController{
+        addRoutes()
+    }
+
+}
+
+package Persistence{
+    class LibraryMapper{}
+
+    class UserMapper{}
+
+    class GameMapper{}
+
+    class FavoritesMapper{}
+
+}
+
+'Relations
+'Entities
+Main --* Library
+Main --o User
+User --* FavoriteList
+FavoriteList --o Game
+Library --* Game
+Game --* Genre
+
+
+@enduml
