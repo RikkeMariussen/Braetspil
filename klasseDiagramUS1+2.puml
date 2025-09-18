@@ -8,13 +8,19 @@ class Main{
 
 package Entities{
 
+    class Application{
+        -Library library
+        -User user
+        'Getters and setters'
+    }
+
     class Library{
         -Game game
-        -search(Game game)
-        -filter(Enum genre)
-        -filterNOOfPlayers(int minNOOfPlayers, int maxNOOfPlayers)
-        -filterAge(int minAgeOfPlayers)
+        -search(Game game) 'Maybe String input for gameName'
         -showAllGames()
+        '-filter(Enum genre)
+        -filterNOOfPlayers(int minNOOfPlayers, int maxNOOfPlayers)
+        -filterAge(int minAgeOfPlayers)'
     }
 
     class User{
@@ -23,19 +29,21 @@ package Entities{
         -String email
         -String password
         -MyCollection myCollection
+        'Getters and setters'
     }
 
     class MyCollection{
         -String listName
         -Integer listId
         -List <Game> games
-        -quickAddGame(Integer gameId, Integer listId)
-        -quickRemoveGame(Integer gameId, Integer listId)
+        'Det er listen der bruger funktionerne, spillet bliver bare sendt med rundt.'
+        -addGame(Integer gameId, Integer listId)
+        -removeGame(Integer gameId, Integer listId)
     } 
 
     class Game {
         -String title
-        -Integer gameId: UUID
+        -Integer gameId
         -String description
         -int minNOOfPlayers
         -int maxNOOfPlayers
@@ -44,6 +52,7 @@ package Entities{
         -int releaseYear
         -List <String> languages
         -Genre genre
+        'Getters and setters'
     }
 
     enum Genre{
@@ -83,8 +92,9 @@ package Persistence{
 
 'Relations
 'Entities
-Main --* Library
-Main --o User
+Main -- Application
+Application --* Library
+Application --o User
 User --* MyCollection
 MyCollection --o Game
 Library --* Game

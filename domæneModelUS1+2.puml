@@ -1,0 +1,30 @@
+@startuml 'Domæne model US1+2'
+'Alt+D = preview
+
+object Application
+object Library
+object MyCollection
+object Game
+object User
+
+'An application contains (must have) one library and can have one user
+Application "1" *-- "1" Library
+Application "1" o-- "*" User
+
+'A user contains (must have) one myCollection
+User "1" *---- "1" MyCollection
+
+'The MyCollection can have many games and a game can be in many collections
+MyCollection "0..*" o---- "1..*" Game
+
+'A Library must have games
+Library "1" *---- "*" Game
+
+@enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <-- (knows-of)
+Dependency ..> (uses)
