@@ -22,10 +22,10 @@ package Entities{
         -Integer userId
         -String email
         -String password
-        -FavoriteList favoriteList
+        -MyCollection myCollection
     }
 
-    class FavoriteList{
+    class MyCollection{
         -String listName
         -Integer listId
         -List <Game> games
@@ -50,6 +50,7 @@ package Entities{
     }
 }
 
+'Vi har ikke fokus på persistence og controllers i denne iteration, hvorfor vi bare har de to packages med, men ikke har udviklet dem
 package Controllers{
     class LibraryController{
         addRoutes()
@@ -63,7 +64,7 @@ package Controllers{
         addRoutes()
     }
 
-    class FavoritesController{
+    class MyCollectionsController{
         addRoutes()
     }
 
@@ -76,7 +77,7 @@ package Persistence{
 
     class GameMapper{}
 
-    class FavoritesMapper{}
+    class MyCollectionMapper{}
 
 }
 
@@ -84,10 +85,17 @@ package Persistence{
 'Entities
 Main --* Library
 Main --o User
-User --* FavoriteList
-FavoriteList --o Game
+User --* MyCollection
+MyCollection --o Game
 Library --* Game
 Game --* Genre
 
 
 @enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <-- (knows-of)
+Dependency ..> (uses)
