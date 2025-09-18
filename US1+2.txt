@@ -1,0 +1,30 @@
+User story 1 - "Add to Collection"
+
+As a registered user
+I want to add games to my collection
+So, my physical games are registered digitally 
+
+Acceptance criteria
+Given that I am on the games library 
+When I select a game from the library
+Then I can add it to my collection
+    OR
+Given that I have entered “game name” in the search bar, and the “quick add” button is active 
+When I click the "quick add" button
+Then the game is added to my collection
+
+
+ 
+User story 2 - "Remove from collection"
+As a registered user
+I want to remove games from my collection
+So that the collection no longer shows the removed game
+
+Acceptance criteria
+Given that I am on my collection page
+When I select a game from my collection
+Then I can remove it from my collection
+	OR
+Given that I have entered “game name” in the search bar, and the “quick remove” button is active 
+When I click the "quick remove" button on the game
+Then the game is removed from my collection
