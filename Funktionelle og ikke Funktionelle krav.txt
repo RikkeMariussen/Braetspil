@@ -1,0 +1,26 @@
+Funktionelle Krav
+•	Systemet skal have et omfattende spil bibliotek.
+•	Systemet skal have et Authentificerings process i form at et login system.
+•	Brugeren skal kunne slette sin egen profil.
+•	Brugeren skal kunne søge i biblioteket.
+•	Brugeren skal kunne logge ind på en personlig profil.
+•	Brugeren skal kunne tilføje spil fra spil biblioteket til sin egne lister.
+•	Brugeren skal kunne fjerne spil fra sin egne lister.
+•	Brugeren skal kunne ansøge andre brugere om ”venskab”.
+•	Brugeren skal kunne bekræfte/afvise andre brugeres venneanmodning.
+•	Brugeren skal kunne se sin egen spilliste.
+•	Brugeren skal kunne se sin venneliste.
+•	Brugeren skal kunne sine venners spillister.
+•	Brugeren skal kunne oprette fælles lister med sine venner.
+
+Ikke-Funktionelle Krav
+•	Systemet skal være intuitivt, og nemt at bevæge sig rundt i, og følge Doherty Threshold (hurtig reaktionstid).
+•	Systemet skal kunne virke på forskellige styresystemer.
+•	Mobilappen skal virke på Android og iOS. 
+•	Systemet skal kunne håndtere adskillige henvændelser på én gang.
+•	Det skal kun være muligt at oprette 1 bruger pr email.
+•	Brugerlogins skal krypteres både under overførelse og i databasen.
+•	Koden skal etableres med MVC arkitektur.
+•	Koden skal være læsbar, og veldokumenteret.
+•	Opdateringer skal kunne rulles ud, med minimal forstyrrelse til brugeren.
+•	95% af førstegangsbrugerne skal kunne fuldføre en registrering uden hjælp.
