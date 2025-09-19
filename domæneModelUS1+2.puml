@@ -1,15 +1,13 @@
 @startuml 'Domæne model US1+2'
 'Alt+D = preview
 
-object Application
 object Library
 object MyCollection
 object Game
 object User
 
-'An application contains (must have) one library and can have one user
-Application "1" *-- "1" Library
-Application "1" o-- "*" User
+'A user can use one library, and a library can have many users
+User "1..*" ..> "1" Library
 
 'A user contains (must have) one myCollection
 User "1" *---- "1" MyCollection
@@ -19,6 +17,7 @@ MyCollection "0..*" o---- "1..*" Game
 
 'A Library must have games
 Library "1" *---- "*" Game
+
 
 @enduml
 

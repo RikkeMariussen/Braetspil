@@ -8,11 +8,6 @@ class Main{
 
 package Entities{
 
-    class Application{
-        -Library library
-        -User user
-        'Getters and setters'
-    }
 
     class Library{
         -Game game
@@ -92,9 +87,9 @@ package Persistence{
 
 'Relations
 'Entities
-Main -- Application
-Application --* Library
-Application --o User
+
+Main --* Library
+Main --o User
 User --* MyCollection
 MyCollection --o Game
 Library --* Game

@@ -1,28 +1,18 @@
 Funktionelle Krav
 •	Systemet skal have et omfattende spil bibliotek.
 •	Systemet skal have et Authentificerings process i form at et login system.
-•	Systemet skal oprette en MyCollection når der laves en ny bruger profil.
 •	Systemet skal have en adminProfil side.
 •	Systemet skal tjekke for dubletter når der tilføjes nye spil.
 •	Admin skal kunne oprette et spil.
-•	Admin skal kunne FETCHE data fra API'en (update).
+•	Admin skal kunne Manuelt FETCHE data fra API'en (update).
 •	Admin skal kunne ændre i et spil.
 •	Admin siden skal kunne tilgås fra PC.
-•	Brugeren skal kunne oprette en bruger profil.
-•	Brugeren skal kunne slette sin egen profil.
-•	Brugeren skal kunne redigere sin egen profil.
 •	Brugeren skal kunne søge i biblioteket.
 •	Brugeren skal kunne foreslå oprettelse af spil til biblioteket. 
 •	Brugeren skal kunne logge ind på en personlig profil.
-•	Brugeren skal kunne tilføje spil fra spil biblioteket til sin egne lister.
-•	Brugeren skal kunne fjerne spil fra sin egne lister.
-•	Brugeren skal kunne ansøge andre brugere om ”venskab”.
-•	Brugeren skal kunne bekræfte/afvise andre brugeres venneanmodning.
-•	Brugeren skal kunne fjerne venner fra sin venneliste.
-•	Brugeren skal kunne se sin egne spillister.
-•	Brugeren skal kunne se sin venneliste.
-•	Brugeren skal kunne sine venners spillister.
-•	Brugeren skal kunne oprette fælles lister med sine venner.
+•	Brugeren skal kunne ansøge og besvare andre brugers venneanmodninger
+•	Brugeren skal kunne se sine egne og venners spillister
+•	Brugeren skal kunne oprette egne, og fælles lister med sine venner.
 
 Ikke-Funktionelle Krav
 •	Systemet skal være intuitivt, og nemt at bevæge sig rundt i, og følge Doherty Threshold (hurtig reaktionstid).
