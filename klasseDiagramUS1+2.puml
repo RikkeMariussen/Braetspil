@@ -58,6 +58,9 @@ package Entities{
 package Controllers{
     class LibraryController{
         addRoutes()
+        retrieveGameInfo()
+        removeGame()
+        addGame()
     }
 
     class UserController{
@@ -75,7 +78,11 @@ package Controllers{
 }
 
 package Persistence{
-    class LibraryMapper{}
+    class LibraryMapper{
+        retrieveGameInfo()
+        removeGame()
+        addGame()
+    }
 
     class UserMapper{}
 
